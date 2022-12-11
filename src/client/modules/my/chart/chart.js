@@ -159,7 +159,7 @@ export default class Chart extends LightningElementWithSLDS {
                 labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'],
                 datasets: [
                     {
-                        label: 'Average',
+                        label: 'comms insurance retail health ',
                         data: this.numbers({ count: 6, min: -100, max: 100 }),
                         borderColor: CHART_COLORS.red,
                         backgroundColor: 'rgb(255,255,0,0.5)',
@@ -168,7 +168,7 @@ export default class Chart extends LightningElementWithSLDS {
                         pointHoverRadius: 15
                     },
                     {
-                        label: 'Current',
+                        label: 'Industries Scheduler Services',
                         data: this.numbers({ count: 6, min: -100, max: 100 }),
                         borderColor: CHART_COLORS.red,
                         backgroundColor: 'rgb(0,255,0,0.5)',
