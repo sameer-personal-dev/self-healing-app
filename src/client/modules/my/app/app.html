@@ -102,42 +102,42 @@
                                     <div class="col-lg-2 col-md-12 col-6 mb-4">
                                         <div class="card">
                                             <div class="card-body2">
-                                                <my-chart chart-type="guage" sobject="Case"></my-chart>
+                                                <my-chart chart-type="guage" title="Industries ARC" sobject="Case"></my-chart>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-12 col-6 mb-4">
                                         <div class="card">
                                             <div class="card-body2">
-                                                <my-chart chart-type="guage" sobject="Case"></my-chart>
+                                                <my-chart chart-type="guage" title="Industries CPQ" sobject="Case"></my-chart>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-12 col-6 mb-4">
                                         <div class="card">
                                             <div class="card-body2">
-                                                <my-chart chart-type="guage" sobject="Case"></my-chart>
+                                                <my-chart chart-type="guage" title="Industries EPC" sobject="Case"></my-chart>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-12 col-6 mb-4">
                                         <div class="card">
                                             <div class="card-body2">
-                                                <my-chart chart-type="guage" sobject="Case"></my-chart>
+                                                <my-chart chart-type="guage" title="BRE" sobject="Case"></my-chart>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-12 col-6 mb-4">
                                         <div class="card">
                                             <div class="card-body2">
-                                                <my-chart chart-type="guage" sobject="Case"></my-chart>
+                                                <my-chart chart-type="guage" title="Common Services" sobject="Case"></my-chart>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-12 col-6 mb-4">
                                         <div class="card">
                                             <div class="card-body2">
-                                                <my-chart chart-type="guage" sobject="Case"></my-chart>
+                                                <my-chart chart-type="guage" title="Industries OM" sobject="Case"></my-chart>
                                             </div>
                                         </div>
                                     </div>
@@ -153,21 +153,21 @@
                                     <div class="col-lg-4 col-md-12 col-6 mb-4">
                                         <div class="card">
                                             <div class="card-body-2">
-                                                <my-chart sobject="Case"></my-chart>
+                                                <my-chart title="Systems" sobject="Case"></my-chart>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-12 col-6 mb-4">
                                         <div class="card">
                                             <div class="card-body-2">
-                                                <my-chart chart-type="bar" sobject="Case"></my-chart>
+                                                <my-chart title="Situation By Severity" chart-type="bar" sobject="Case"></my-chart>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-12 col-6 mb-4">
                                         <div class="card">
                                             <div class="card-body-2">
-                                                <my-chart chart-type="line" sobject="Case"></my-chart>
+                                                <my-chart title="Situation By Services" chart-type="line" sobject="Case"></my-chart>
                                             </div>
                                         </div>
                                     </div>
@@ -176,12 +176,32 @@
                         </div>
                     </div>
                     <div class="container-xxl flex-grow-1 container-p-y">
-
                         <div class="row">
                             <div class="col-lg-12 col-md-5 order-1">
                                 <div class="card">
                                     <div class="card-body-2">
-                                        <my-chart chart-type="line" sobject="Case"></my-chart>
+                                        <table class="statusTable" id="customers">
+                                            <tr>
+                                              <th>Details</th>
+                                              <th>Severity</th>
+                                              <th>Action</th>
+                                            </tr>
+                                            <tr>
+                                              <td>Throttled Scheduler services for non critical functions to support Mass Vehicle Recall Action for Auto Cloud</td>
+                                              <td>Low</td>
+                                              <td><button class="slds-button slds-button_brand">Fix now</button></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Prioritized Credit Card Denial Call Volumes for Service cloud due to a Security even in xyz Bank</td>
+                                              <td>Medium</td>
+                                              <td><button class="slds-button slds-button_brand">Fix now</button></td>
+                                            </tr>
+                                            <tr>
+                                              <td>Throttled CPQ APIs due to heavy traffic</td>
+                                              <td>Low</td>
+                                              <td><button class="slds-button slds-button_brand">Fix now</button></td>
+                                            </tr>
+                                          </table>
                                     </div>
                                 </div>
                             </div>
