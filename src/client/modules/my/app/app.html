@@ -9,14 +9,14 @@
                         <a href="index.html" class="app-brand-link">
                             <span class="app-brand-logo demo">
                                 <img style="height: 80px;"
-                                    src="../../../resources/assets/icons/utility/salesforce-icon.png" />
+                                    src="https://cdn.iconscout.com/icon/free/png-256/salesforce-282298.png" />
                             </span>
                             <span class="app-title">Apps Dashboard</span>
                         </a>
                     </div>
                     <ul class="menu-inner py-1">
                         <!-- Dashboard -->
-                        <li class="menu-item active">
+                        <li class="menu-item active" onclick={showHome}>
                             <a href="index.html" class="menu-link">
                                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                                 <img class="dashboardMenuImage" src="../../../resources/assets/icons/shop.svg" />
@@ -53,7 +53,7 @@
                         </li>
                     </ul>
                 </aside>
-                <div class="layout-page">
+                <div class="layout-page" if:false={showSpeedDialDetails}>
                     <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
                         id="layout-navbar">
                         <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
@@ -101,8 +101,8 @@
                                 <div class="row">
                                     <div class="col-lg-2 col-md-12 col-6 mb-4">
                                         <div class="card">
-                                            <div class="card-body2">
-                                                <my-chart chart-type="guage" title="Industries ARC" sobject="Case"></my-chart>
+                                            <div class="card-body2" onclick={openSpeedDialDetails}>
+                                                <my-chart chart-type="guage" title="Scheduler Services" sobject="Case"></my-chart>
                                             </div>
                                         </div>
                                     </div>
@@ -208,6 +208,13 @@
                         </div>
                     </div>
 
+                </div>
+                <div class="layout-page" if:true={showSpeedDialDetails}>
+                    <div class="card">
+                        <div class="card-body-2">
+                            <my-chart chart-type="line" title="Industries Scheduler Services" sobject="Case"></my-chart>
+                        </div>
+                    </div>
                 </div>
             </div>
 
