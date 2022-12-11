@@ -5,6 +5,7 @@ export default class Chart extends LightningElementWithSLDS {
     @api sobject = '';
     @api socket;
     @api chartType = 'doughnut';
+    @api title;
 
     @track events = 0;
     @track socketInitialized = false;
@@ -117,17 +118,17 @@ export default class Chart extends LightningElementWithSLDS {
             labels: this.months({ count: 7 }),
             datasets: [
                 {
-                    label: 'Dataset 1',
+                    label: 'Warning',
                     data: this.numbers(NUMBER_CFG),
                     backgroundColor: CHART_COLORS.red
                 },
                 {
-                    label: 'Dataset 2',
+                    label: 'Minor',
                     data: this.numbers(NUMBER_CFG),
                     backgroundColor: CHART_COLORS.blue
                 },
                 {
-                    label: 'Dataset 3',
+                    label: 'Critical',
                     data: this.numbers(NUMBER_CFG),
                     backgroundColor: CHART_COLORS.green
                 }
@@ -137,30 +138,28 @@ export default class Chart extends LightningElementWithSLDS {
             return barData;
         } else if (this.chartType == 'doughnut') {
             return {
-                labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue'],
-                datasets: [
-                    {
-                        label: 'Dataset 1',
-                        data: this.numbers(NUMBER_CFG),
-                        backgroundColor: [
-                            '#003f5c',
-                            '#2f4b7c',
-                            '#665191',
-                            '#a05195',
-                            '#d45087',
-                            '#f95d6a',
-                            '#ff7c43',
-                            '#ffa600'
-                        ]
-                    }
-                ]
+              labels: ['27394 Nodes', '15 Needs Attention', '20 Unhealthy'],
+              datasets: [
+                {
+                  backgroundColor: ['Green', '#777'],
+                  data: [95, 5]
+                },
+                {
+                  backgroundColor: ['Yellow', '#009dab'],
+                  data: [15, 85]
+                },
+                {
+                  backgroundColor: ['Red', '#777'],
+                  data: [80, 20]
+                }
+              ]
             };
         } else if (this.chartType == 'line') {
             return {
                 labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'],
                 datasets: [
                     {
-                        label: 'Dataset',
+                        label: 'Average',
                         data: this.numbers({ count: 6, min: -100, max: 100 }),
                         borderColor: CHART_COLORS.red,
                         backgroundColor: 'rgb(255,255,0,0.5)',
@@ -169,7 +168,7 @@ export default class Chart extends LightningElementWithSLDS {
                         pointHoverRadius: 15
                     },
                     {
-                        label: 'Dataset',
+                        label: 'Current',
                         data: this.numbers({ count: 6, min: -100, max: 100 }),
                         borderColor: CHART_COLORS.red,
                         backgroundColor: 'rgb(0,255,0,0.5)',
