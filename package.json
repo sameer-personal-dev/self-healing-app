@@ -19,7 +19,7 @@
         "chart.js": "^2.8.0"
     },
     "engines": {
-        "node": ">=10.13.0",
+        "node": ">=10.13.0 <=16.0.0",
         "npm": ">=6.4.1",
         "yarn": ">=1.9.4"
     },
@@ -41,14 +41,14 @@
     },
     "repository": "Paramesh Anakapalli/hackathonlwcapp",
     "scripts": {
-        "build": "lwc-services build -m production;export NODE_OPTIONS=--openssl-legacy-provider",
+        "build": "lwc-services build -m production",
         "build:development": "lwc-services build",
         "lint": "eslint ./src/**/*.js",
         "postinstall": "husky install",
         "precommit": "npm run prettier:verify && [ $? -eq 0 ] && npm run lint",
         "prettier": "prettier --write \"**/*.{css,html,js,json,md,ts,yaml,yml}\"",
         "prettier:verify": "prettier --list-different \"**/*.{css,html,js,json,md,ts,yaml,yml}\"",
-        "start": "NODE_OPTIONS=--openssl-legacy-provider npm-run-all;yarn build",
+        "start": "npm run build; run-p start:client start:api",
         "start:api": "node src/server/api.js",
         "start:client": "node scripts/server.js",
         "test:unit": "lwc-services test:unit",
