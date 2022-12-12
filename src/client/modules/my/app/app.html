@@ -9,7 +9,7 @@
                         <a href="index.html" class="app-brand-link">
                             <span class="app-brand-logo demo">
                                 <img style="height: 80px;"
-                                    src="https://cdn.iconscout.com/icon/free/png-256/salesforce-282298.png" />
+                                    src="../../../resources/assets/icons/utility/salesforce-icon.png" />
                             </span>
                             <span class="app-title">Industries AI/ML</span>
                         </a>
@@ -263,7 +263,7 @@
                                     <div class="col-lg-4 col-md-12 col-6 mb-4">
                                         <div class="card">
                                             <div class="card-body-2">
-                                                <my-chart title="Situation By Severity" chart-type="bar" sobject="Case">
+                                                <my-chart title="System Logs" chart-type="bar" sobject="Case" chart-name="bar1">
                                                 </my-chart>
                                             </div>
                                         </div>
@@ -283,16 +283,32 @@
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <div class="row">
                             <div class="col-lg-12 col-md-5 order-1">
+                                <div class="col-lg-12 col-md-12 col-12 mb-12">
+                                    <div class="card">
+                                        <div class="card-body-2">
+                                            <my-chart title="Situation By Severity" chart-type="bar" sobject="Case">
+                                            </my-chart>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-5 order-1">
                                 <div class="card">
                                     <div class="card-body-2">
                                         <table class="statusTable" id="customers">
                                             <tr>
-                                                <th>Details</th>
+                                                <th>Available Fixes</th>
                                                 <th>Severity</th>
                                                 <th>Action</th>
                                             </tr>
                                             <tr>
-                                                <td>Throttled Scheduler services for non critical functions to support
+                                                <td>Throttle Scheduler services for non critical functions to support
                                                     Mass Vehicle Recall Action for Auto Cloud</td>
                                                 <td>Low</td>
                                                 <td><button class="slds-button slds-button_brand">Fix now</button></td>
@@ -304,7 +320,7 @@
                                                 <td><button class="slds-button slds-button_brand">Fix now</button></td>
                                             </tr>
                                             <tr>
-                                                <td>Throttled CPQ APIs due to heavy traffic</td>
+                                                <td>Throttle CPQ APIs due to heavy traffic</td>
                                                 <td>Low</td>
                                                 <td><button class="slds-button slds-button_brand">Fix now</button></td>
                                             </tr>
@@ -317,9 +333,36 @@
 
                 </div>
                 <div class="layout-page" if:true={showSpeedDialDetails}>
-                    <div class="card">
+                    <div class="card" style="height:100%">
                         <div class="card-body-2">
                             <my-chart chart-type="line" title="Industries Scheduler Services" sobject="Case"></my-chart>
+                        </div>
+                        <div class="container-xxl flex-grow-1 container-p-y">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-5 order-1">
+                                    <div class="card">
+                                        <div class="card-body-2">
+                                            <table class="statusTable" id="customerTable">
+                                                <tr>
+                                                    <th>Available Fixes</th>
+                                                    <th>Severity</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Throttle Industries Scheduler Services for non critical functions</td>
+                                                    <td>Low</td>
+                                                    <td><button class="slds-button slds-button_brand">Fix now</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Throttle Industries Scheduler Service due to heavy traffic</td>
+                                                    <td>Low</td>
+                                                    <td><button class="slds-button slds-button_brand">Fix now</button></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
