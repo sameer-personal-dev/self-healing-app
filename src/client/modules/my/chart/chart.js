@@ -156,7 +156,7 @@ export default class Chart extends LightningElementWithSLDS {
             };
         } else if (this.chartType == 'line') {
             return {
-                labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'],
+                labels: ['12 PM', '2 PM', '4 PM', '6 PM', '8 PM', '10 PM'],
                 datasets: [
                     {
                         label: 'comms insurance retail health ',
