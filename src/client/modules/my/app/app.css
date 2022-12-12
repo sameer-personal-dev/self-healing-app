@@ -76,3 +76,13 @@ img {
     background-color: #04AA6D;
     color: white;
   }
+  .guageImage {
+    margin: -10px 0 0 16px;
+  }
+  .card-body2 {
+    padding: 16px 0 0 13px;
+    cursor: pointer;
+  }
+  .displayInlineBlock {
+    display: inline-block;
+  }
