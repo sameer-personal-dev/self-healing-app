@@ -6,6 +6,7 @@ export default class Chart extends LightningElementWithSLDS {
     @api socket;
     @api chartType = 'doughnut';
     @api title;
+    @api chartName;
 
     @track events = 0;
     @track socketInitialized = false;
@@ -134,7 +135,45 @@ export default class Chart extends LightningElementWithSLDS {
                 }
             ]
         };
-        if (this.chartType == 'bar') {
+        const industiresBarData = {
+            labels: this.months({ count: 7 }),
+            datasets: [
+                {
+                    label: 'Industries Scheduler Services',
+                    data: this.numbers(NUMBER_CFG),
+                    backgroundColor: CHART_COLORS.orange
+                },
+                {
+                    label: 'Industries CPQ',
+                    data: this.numbers(NUMBER_CFG),
+                    backgroundColor: CHART_COLORS.yellow
+                },
+                {
+                    label: 'Industries EPC',
+                    data: this.numbers(NUMBER_CFG),
+                    backgroundColor: CHART_COLORS.green
+                },
+                {
+                    label: 'Industries BRE',
+                    data: this.numbers(NUMBER_CFG),
+                    backgroundColor: CHART_COLORS.blue
+                },
+                {
+                    label: 'Common Services',
+                    data: this.numbers(NUMBER_CFG),
+                    backgroundColor: CHART_COLORS.purple
+                },
+                {
+                    label: 'Industries OM',
+                    data: this.numbers(NUMBER_CFG),
+                    backgroundColor: CHART_COLORS.grey
+                }
+
+            ]
+        };
+        if (this.chartType == 'bar' && !this.chartName) {
+            return industiresBarData;
+        }else if (this.chartType == 'bar' && this.chartName) {
             return barData;
         } else if (this.chartType == 'doughnut') {
             return {
